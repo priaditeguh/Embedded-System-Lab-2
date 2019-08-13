@@ -1,1 +1,1 @@
-# Embedded-System-Lab-2
+# Mean Shift Tracking Optimization in Beagleboard Rev C4
