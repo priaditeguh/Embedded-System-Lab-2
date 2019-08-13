@@ -1,0 +1,48 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  us/call  us/call  name    
+ 50.08      0.01     0.01      166    60.34    60.34  MeanShift::Epanechnikov_kernel(cv::Mat&)
+ 50.08      0.02     0.01      165    60.70    60.70  MeanShift::CalWeight(cv::Mat const&, cv::Mat&, cv::Mat&, cv::Rect_<int>&)
+  0.00      0.02     0.00      166     0.00    60.34  MeanShift::pdf_representation(cv::Mat const&, cv::Rect_<int> const&)
+  0.00      0.02     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN9MeanShiftC2Ev
+  0.00      0.02     0.00        1     0.00     0.00  _GLOBAL__sub_I_main
+
+			Call graph
+
+
+granularity: each sample hit covers 2 byte(s) for 49.92% of 0.02 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     99.7    0.00    0.02                 MeanShift::track(cv::Mat const&) [1]
+                0.01    0.00     165/165         MeanShift::CalWeight(cv::Mat const&, cv::Mat&, cv::Mat&, cv::Rect_<int>&) [4]
+                0.00    0.01     165/166         MeanShift::pdf_representation(cv::Mat const&, cv::Rect_<int> const&) [2]
+-----------------------------------------------
+                0.00    0.00       1/166         MeanShift::Init_target_frame(cv::Mat const&, cv::Rect_<int> const&) [5]
+                0.00    0.01     165/166         MeanShift::track(cv::Mat const&) [1]
+[2]     50.0    0.00    0.01     166         MeanShift::pdf_representation(cv::Mat const&, cv::Rect_<int> const&) [2]
+                0.01    0.00     166/166         MeanShift::Epanechnikov_kernel(cv::Mat&) [3]
+-----------------------------------------------
+                0.01    0.00     166/166         MeanShift::pdf_representation(cv::Mat const&, cv::Rect_<int> const&) [2]
+[3]     50.0    0.01    0.00     166         MeanShift::Epanechnikov_kernel(cv::Mat&) [3]
+-----------------------------------------------
+                0.01    0.00     165/165         MeanShift::track(cv::Mat const&) [1]
+[4]     50.0    0.01    0.00     165         MeanShift::CalWeight(cv::Mat const&, cv::Mat&, cv::Mat&, cv::Rect_<int>&) [4]
+-----------------------------------------------
+                                                 <spontaneous>
+[5]      0.3    0.00    0.00                 MeanShift::Init_target_frame(cv::Mat const&, cv::Rect_<int> const&) [5]
+                0.00    0.00       1/166         MeanShift::pdf_representation(cv::Mat const&, cv::Rect_<int> const&) [2]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [24]
+[13]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN9MeanShiftC2Ev [13]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [24]
+[14]     0.0    0.00    0.00       1         _GLOBAL__sub_I_main [14]
+-----------------------------------------------
+
+Index by function name
+
+  [13] _GLOBAL__sub_I__ZN9MeanShiftC2Ev (meanshift.cpp) [2] MeanShift::pdf_representation(cv::Mat const&, cv::Rect_<int> const&) [4] MeanShift::CalWeight(cv::Mat const&, cv::Mat&, cv::Mat&, cv::Rect_<int>&)
+  [14] _GLOBAL__sub_I_main (main.cpp) [3] MeanShift::Epanechnikov_kernel(cv::Mat&)

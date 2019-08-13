@@ -1,0 +1,12 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="MeanShift::track(cv::Mat const&)\n99.70%\n(0.00%)"];
+	1 -> 2 [arrowsize="0.70", color="#f15a02", fontcolor="#f15a02", fontsize="10.00", label="49.70%\n165×", labeldistance="1.99", penwidth="1.99"];
+	1 -> 4 [arrowsize="0.71", color="#f15902", fontcolor="#f15902", fontsize="10.00", label="50.00%\n165×", labeldistance="2.00", penwidth="2.00"];
+	2 [color="#f15902", fontcolor="#ffffff", fontsize="10.00", label="MeanShift::pdf_representation(cv::Mat const&, cv::Rect_<int> const&)\n50.00%\n(0.00%)\n166×"];
+	2 -> 3 [arrowsize="0.71", color="#f15902", fontcolor="#f15902", fontsize="10.00", label="50.00%\n166×", labeldistance="2.00", penwidth="2.00"];
+	3 [color="#f15902", fontcolor="#ffffff", fontsize="10.00", label="MeanShift::Epanechnikov_kernel(cv::Mat&)\n50.00%\n(50.00%)\n166×"];
+	4 [color="#f15902", fontcolor="#ffffff", fontsize="10.00", label="MeanShift::CalWeight(cv::Mat const&, cv::Mat&, cv::Mat&, cv::Rect_<int>&)\n50.00%\n(50.00%)\n165×"];
+}

@@ -1,0 +1,3 @@
+/data/bbToolChain/usr/local/share/codesourcery/bin/arm-none-linux-gnueabi-g++ -o Debug/pool_notify Debug/pool_notify.o Debug/main.o Debug/test.o --sysroot=/data/home/hmushtaq/armusr -L/data/home/hmushtaq/armusr/lib -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_flann -lpthread -lm /data/bbToolChain/usr/local/share/bbframework/platform/beagle-linux/tools/dsplink_linux_1_65_00_03/gpp/BUILD/EXPORT/DEBUG/dsplink.lib 
+
+-static /data/bbToolChain/usr/local/share/bbframework/platform/beagle-linux/tools/dsplink_linux_1_65_00_03/gpp/BUILD/EXPORT/DEBUG/dsplink.lib
